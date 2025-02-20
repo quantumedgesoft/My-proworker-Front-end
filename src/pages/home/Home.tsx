@@ -1,5 +1,9 @@
+import PopularCategory from "../../components/popularCategory/PopularCategory";
+
 const Home = () => {
-  return <div>Home Page</div>;
+  return <>
+  <PopularCategory/>
+  </>;
 };
 
 export default Home;
