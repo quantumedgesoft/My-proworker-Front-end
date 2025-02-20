@@ -33,13 +33,21 @@
   --spacing-2: 0.5rem;
 
   /* Width */
-  --width-standard:1440px;
-  --width-large:1920px;
-  --width-extra-large:2560px;
+  --width-standard: 1440px;
+  --width-large: 1920px;
+  --width-extra-large: 2560px;
 
   /* Padding */
   --padding-p83: 83px;
 
+}
+
+body {
+  background-color: #fff;
+  color: #62646a;
+  font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+  position: relative;
+  width: 100%;
 }
 
 
@@ -136,3 +144,4 @@ h6 {
   line-height: 22px;
   font-weight: 700;
 }
+
