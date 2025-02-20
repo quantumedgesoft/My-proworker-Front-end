@@ -1,9 +1,9 @@
 import { Outlet } from "react-router";
-import Nvabar from "../common/header/navbar/Nvabar";
+import Nvabar from "../common/header/navbar/Navbar";
 
 const PrimaryLayout = () => {
   return (
-    <div>
+    <div className="w-full">
       <Nvabar/>
       <Outlet />
       Footer
