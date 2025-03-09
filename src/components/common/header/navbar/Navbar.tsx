@@ -5,8 +5,8 @@ import TestMenu from "./TestMenu";
 const Navbar = () => {
   return (
     <nav className="h-[107px] bg-secondary">
-      <div className="w-max-standard mx-auto px-[83px] h-full flex justify-center items-center text-white ">
-        <div className="w-full h-full flex items-center justify-between border-b-[2px] border-[rgb(204,204,204,0.6)]">
+      <div className="w-max-standard mx-auto px-[83px] h-full flex justify-center items-center text-white">
+        <div className="w-full h-full flex items-center justify-between border-b-[2px] border-gray3/16">
           {/* Logo & Category */}
           <div className="w-[376px w-[29.51%] h-[64px] overflow-hidde flex justify-between items-center">
             <div className="w-[234px] h-full">
