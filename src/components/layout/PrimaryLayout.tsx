@@ -4,7 +4,7 @@ import Nvabar from "../common/header/navbar/Navbar";
 const PrimaryLayout = () => {
   return (
     <div className="w-full">
-      <Nvabar/>
+      <Nvabar/> 
       <Outlet />
       Footer
     </div>
