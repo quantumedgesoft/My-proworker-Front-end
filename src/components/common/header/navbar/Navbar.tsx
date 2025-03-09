@@ -11,7 +11,7 @@ const Navbar = () => {
           <div className="w-[376px w-[29.51%] h-[64px] overflow-hidde flex justify-between items-center">
             <div className="w-[234px] h-full">
               <img
-                src="/src/assets/img/logo.png"
+                src="/assets/img/logo.png"
                 alt="Myproworker Logo"
                 className="w-full h-full object-cover object-center"
               />

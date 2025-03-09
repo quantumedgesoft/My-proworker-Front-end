@@ -4,7 +4,7 @@ const NavSearch = () => {
       <button className="w-[122px] h-[36px] bg-[rgba(136,136,136,0.22)] flex justify-center items-center subtitle2 rounded-[6px]">
         Freelancer
         <img
-          src="/src/assets/icons/light_arrow-drop-down.svg"
+          src="/assets/icons/light_arrow-drop-down.svg"
           alt="light_arrow-drop-down"
         />
       </button>
