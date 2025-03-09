@@ -40,6 +40,9 @@
   /* Padding */
   --padding-p83: 83px;
 
+  /* Border Radious */
+  --border-radius--br4: 4px
+
 }
 
 body {
