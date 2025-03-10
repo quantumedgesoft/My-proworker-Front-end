@@ -10,14 +10,14 @@ const TestMenu = () => {
       name: "Design & Category",
       path: "",
       sub: false,
-      icon: "/src/assets/icons/navbar/category-icons/digital marketing.png",
+      icon: "/assets/icons/navbar/category-icons/design & creative.png",
     },
     {
       id: 2,
       name: "Digital Marketing",
       path: "",
       sub: false,
-      icon: "/src/assets/icons/navbar/category-icons/development & it.png",
+      icon: "/assets/icons/navbar/category-icons/digital marketing.png",
     },
     {
       id: 3,
@@ -30,28 +30,28 @@ const TestMenu = () => {
         { name: "Soap", link: "/products/soap" },
         { name: "Candy", link: "/products/candy" },
       ],
-      icon: "/src/assets/icons/navbar/category-icons/finance & Accounting.png",
+      icon: "/assets/icons/navbar/category-icons/development & it.png",
     },
     {
       id: 4,
       name: "Finance & Accounting",
       path: "",
       sub: false,
-      icon: "/src/assets/icons/navbar/category-icons/design & creative.png",
+      icon: "/assets/icons/navbar/category-icons/finance & Accounting.png",
     },
     {
       id: 5,
       name: "Video & Animation",
       path: "",
       sub: false,
-      icon: "/src/assets/icons/navbar/category-icons/video & animation.png",
+      icon: "/assets/icons/navbar/category-icons/video & animation.png",
     },
     {
       id: 6,
       name: "Writing & Translation",
       path: "",
       sub: false,
-      icon: "/src/assets/icons/navbar/category-icons/writing & translation.png",
+      icon: "/assets/icons/navbar/category-icons/writing & translation.png",
     },
   ];
 
@@ -61,7 +61,7 @@ const TestMenu = () => {
         onClick={() => setOpenMenu(!openMenu)}
         className="subtitle2 border border-primary w-[120px] h-[29px] bg-[rgb(85,196,26, 0.6)] bg-op rounded-[29px] text-primary flex items-center justify-center gap-[5px] shadow-md cursor-pointer"
       >
-        <img src="/src/assets/icons/bx_category.svg" alt="category icon" />
+        <img src="/assets/icons/bx_category.svg" alt="category icon" />
         <p>Categories</p>
       </button>
 
