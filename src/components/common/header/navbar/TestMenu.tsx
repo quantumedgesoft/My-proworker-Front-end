@@ -100,7 +100,7 @@ const TestMenu = () => {
 
               {cat.submenu && openSubmenu === index && (
                 <div className="absolute top-0 left-[262px] flex flex-col  p-5 w-[288px] h-[323px] rounded-[4px] bg-white shadow-xl gap-2">
-                  {[...Array(5)].map((item, idx) => (
+                  {[...Array(5)].map((_, idx) => (
                     <p key={idx} className="body2 text-gray2 cursor-pointer">
                       SubMenu{idx}
                     </p>
