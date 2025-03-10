@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router";
+import CategoriesBtn from "../../../utils/buttons/CategoriesBtn";
 
-const TestMenu = () => {
-  const [openMenu, setOpenMenu] = useState(false);
+const CategoryMenu = () => {
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
   const [openSubmenu, setOpenSubmenu] = useState<number | null>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+
 
   const categories = [
     {
@@ -25,10 +29,12 @@ const TestMenu = () => {
       path: "",
       sub: true,
       submenu: [
-        { name: "Snacks", link: "/products/snacks" },
-        { name: "Pickle", link: "/products/pickle" },
-        { name: "Soap", link: "/products/soap" },
-        { name: "Candy", link: "/products/candy" },
+        { name: "Design & Category", path: "" },
+        { name: "Digital Marketing", path: "" },
+        { name: "Development & IT", path: "" },
+        { name: "Finance & Accounting", path: "" },
+        { name: "Video & Animation", path: "" },
+        { name: "Writing & Translation", path: "" },
       ],
       icon: "/assets/icons/navbar/category-icons/development & it.png",
     },
@@ -55,18 +61,30 @@ const TestMenu = () => {
     },
   ];
 
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setOpenMenu(false);
+        setOpenSubmenu(null);
+      }
+    };
+
+    if (openMenu) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [openMenu]);
+
   return (
-    <div className="relative z-[999]">
-      <button
-        onClick={() => setOpenMenu(!openMenu)}
-        className="subtitle2 border border-primary w-[120px] h-[29px] bg-[rgb(85,196,26, 0.6)] bg-op rounded-[29px] text-primary flex items-center justify-center gap-[5px] shadow-md cursor-pointer"
-      >
-        <img src="/assets/icons/bx_category.svg" alt="category icon" />
-        <p>Categories</p>
-      </button>
+    <div className="relative z-[999]" ref={menuRef}>
+      <CategoriesBtn setOpenMenu={setOpenMenu} openMenu={openMenu} />
 
       {openMenu && (
-        <div className="absolute top-[69px] z-[999] flex flex-col  p-5 w-[288px] h-[323px] rounded-[4px] bg-white shadow-xl gap-2">
+        <div className="absolute top-[69px] z-[999] flex flex-col  p-5 pb-10 w-[288px] h-[323px rounded-[4px] bg-white shadow-xl gap-2">
           {categories.map((cat, index) => (
             <div
               className="relative"
@@ -99,13 +117,17 @@ const TestMenu = () => {
               </div>
 
               {cat.submenu && openSubmenu === index && (
-                <div className="absolute top-0 left-[262px] flex flex-col  p-5 w-[288px] h-[323px] rounded-[4px] bg-white shadow-xl gap-2">
-                  {[...Array(5)].map((_, idx) => (
-                    <p key={idx} className="body2 text-gray2 cursor-pointer">
-                      SubMenu{idx}
-                    </p>
+                <ul className="absolute top-[-96px] left-[262px] flex flex-col p-5 pb-8 w-[288px] h-[323px rounded-[4px] bg-white shadow-xl gap-4">
+                  {cat.submenu.map((_, idx) => (
+                    <Link
+                      to=""
+                      key={idx}
+                      className="body2 text-gray2 cursor-pointer"
+                    >
+                      {item?.name}
+                    </Link>
                   ))}
-                </div>
+                </ul>
               )}
             </div>
           ))}
@@ -115,4 +137,4 @@ const TestMenu = () => {
   );
 };
 
-export default TestMenu;
+export default CategoryMenu;
