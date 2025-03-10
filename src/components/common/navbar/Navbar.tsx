@@ -8,7 +8,8 @@ import RegistrantionBtn from "../../../utils/buttons/RegistrantionBtn";
 
 const Navbar = () => {
   return (
-    <nav className="navbar h-[107px] bg-secondary">
+    <nav className="navbar h-[107px] max-w-standard w-full mx-auto px-4 md:px-8 lg:px-21 bg-secondary">
+
       <div className="w-full h-full flex justify-center items-center text-white">
         <div className="w-full h-full flex items-center justify-between border-b-[2px] border-gray3/6">
           {/* Logo & Category */}
@@ -39,7 +40,12 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      
     </nav>
+
+    // <nav className="border h-[107px] w-standard  mx-auto px-4 md:px-8 lg:px-21 bg-secondary">
+
+    // </nav>
   );
 };
 
