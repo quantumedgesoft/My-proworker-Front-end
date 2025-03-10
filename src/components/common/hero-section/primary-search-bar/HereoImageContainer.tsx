@@ -27,7 +27,7 @@ const HereoImageContainer = () => {
 
       <div className="absolute -left-8 -bottom-4 w-[41px] h-[41px] rounded-full flex justify-center items-center">
         <img
-          src="/public/assets/icons/Star 1.png"
+          src="/assets/icons/Star 1.png"
           alt=""
           className="w-full  h-full"
         />
