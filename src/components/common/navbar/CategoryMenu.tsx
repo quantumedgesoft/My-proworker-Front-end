@@ -118,7 +118,7 @@ const CategoryMenu = () => {
 
               {cat.submenu && openSubmenu === index && (
                 <ul className="absolute top-[-96px] left-[262px] flex flex-col p-5 pb-8 w-[288px] h-[323px rounded-[4px] bg-white shadow-xl gap-4">
-                  {cat.submenu.map((item, idx) => (
+                  {cat.submenu.map((_, idx) => (
                     <Link
                       to=""
                       key={idx}
