@@ -1,0 +1,11 @@
+.PrimarySearch {
+  background: rgb(216, 111, 19);
+  background: linear-gradient(
+    90deg,
+    rgba(216, 111, 19, 1) 0%,
+    rgba(85, 196, 26, 1) 7%,
+    rgba(5, 175, 43, 1) 13%,
+    rgba(84, 116, 91, 1) 21%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}

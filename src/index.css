@@ -17,14 +17,19 @@
   /* Font 7 Line height */
   --font-h1: 64px;
   --line-h1: 80px;
+
   --font-h2: 48px;
   --line-h2: 64px;
+
   --font-h3: 32px;
   --line-h3: 48px;
+
   --font-h4: 24px;
   --line-h4: 36px;
+
   --font-h5: 20px;
   --line-h5: 30px;
+  
   --font-h6: 18px;
   --line-h6: 28px;
 

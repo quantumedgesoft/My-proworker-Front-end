@@ -1,10 +1,10 @@
 import { Outlet } from "react-router";
-import Nvabar from "../common/header/navbar/Navbar";
+import Navbar from "../common/navbar/Navbar";
 
 const PrimaryLayout = () => {
   return (
-    <div className="w-full">
-      <Nvabar />
+    <div className="max-w-standard w-full mx-auto px-4 md:px-8 lg:px-21 bg-secondary">
+      <Navbar />
       <Outlet />
     </div>
   );
